@@ -1,0 +1,6 @@
+# pnpm settings (they live here, not in package.json, since pnpm v10+).
+# pnpm blocks dependency build scripts unless explicitly allowed; esbuild
+# needs its postinstall script to place its platform binary, otherwise the
+# install fails with ERR_PNPM_IGNORED_BUILDS.
+allowBuilds:
+  esbuild: true
